@@ -1,0 +1,79 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1726137726
+434147__neospica__punch.wav::AudioStreamWAV::7089931684943881996::1726130657::1726130657::1::::<><>::
+bullet.gd::GDScript::-1::1725366408::0::1::::<>Node3D<>::
+icon.svg::CompressedTexture2D::3668797497444260835::1725176655::1725176664::1::::<><>::
+main.gd::GDScript::-1::1726130662::0::1::::<>Node3D<>::
+main.tscn::PackedScene::8569336832720589386::1726137508::0::1::::<><>::res://main.gd<>uid://c4abhc1axuxc6::::res://Scenes/Debug.tscn<>uid://q7mldkysc6wl::::res://Scenes/HUD.tscn<>uid://d1dcserkmb3q1::::res://Scenes/player.tscn<>uid://c170gnxnfr0rm::::res://Scenes/boundary.tscn
+::res://autoload/::1726137525
+game_manager.gd::GDScript::-1::1726130662::0::1::::<>Node<>::
+sound_manager.gd::GDScript::-1::1726137420::0::1::::<>Node<>::
+sound_manager.tscn::PackedScene::8405159457369637974::1726137525::0::1::::<><>::res://autoload/sound_manager.gd<>uid://dnuxa3pnch1ja::::res://Sounds/bullet.mp3<>uid://cfmljceomyai::::res://Sounds/explosion.wav<>uid://7gbfj48q00ya::::res://Sounds/ting.wav<>uid://bctjhqgky0owe::::res://Sounds/clack.wav<>uid://dnh01uti3qt0c::::res://Sounds/thump.wav<>uid://84u07t6ltxql::::res://Sounds/pucnhy.wav
+utils.gd::GDScript::-1::1725353060::0::1::::<>Node<>::
+::res://Fonts/::1725780629
+OFL.txt::TextFile::-1::1725177948::0::1::::<><>::
+README.txt::TextFile::-1::1725177948::0::1::::<><>::
+SpaceGrotesk-Bold.ttf::FontFile::3779639277002637689::1725177948::1725177969::1::::<><>::
+SpaceGrotesk-Light.ttf::FontFile::736552145833169307::1725177948::1725177969::1::::<><>::
+SpaceGrotesk-Medium.ttf::FontFile::4447793333765020904::1725177948::1725177969::1::::<><>::
+SpaceGrotesk-Regular.ttf::FontFile::893783564201372932::1725177948::1725177969::1::::<><>::
+SpaceGrotesk-SemiBold.ttf::FontFile::2784175474841486997::1725177948::1725177969::1::::<><>::
+SpaceGrotesk-VariableFont_wght.ttf::FontFile::8043084229762961778::1725177948::1725177969::1::::<><>::
+::res://Fonts/static/::1725177960
+::res://Materials/::1725780629
+ast.tres::StandardMaterial3D::-1::1725351281::0::1::::<><>::
+ast_albedo.png::CompressedTexture2D::909362362734636152::1725351281::1725351294::1::::<><>::
+ast_normal.png::CompressedTexture2D::2475523260807113862::1725351281::1725351294::1::::<><>::
+met.tres::StandardMaterial3D::-1::1725271982::0::1::::<><>::res://Materials/met_albedo.png<>res://Materials/met_orm.png<>res://Materials/met_normal.png<>res://Materials/met_heightmap.png<>res://Materials/met_emission.png
+metallic_albedo.png::CompressedTexture2D::3572832396870109742::1725271557::1725271629::1::::<><>::
+metallic_emission.png::CompressedTexture2D::1711673696722494149::1725271557::1725271564::1::::<><>::
+metallic_heightmap.png::CompressedTexture2D::2572344332313527370::1725271557::1725271564::1::::<><>::
+metallic_normal.png::CompressedTexture2D::1759722123339112568::1725271557::1725271564::1::::<><>::
+metallic_orm.png::CompressedTexture2D::6707505012662949158::1725271557::1725271564::1::::<><>::
+met_albedo.png::CompressedTexture2D::1031849916815859959::1725271981::1725271984::1::::<><>::
+met_emission.png::CompressedTexture2D::8788074752581505755::1725271981::1725271984::1::::<><>::
+met_heightmap.png::CompressedTexture2D::5109910680830701405::1725271982::1725271984::1::::<><>::
+met_normal.png::CompressedTexture2D::331344146032079502::1725271981::1725271984::1::::<><>::
+met_orm.png::CompressedTexture2D::3866823836950568844::1725271981::1725271984::1::::<><>::
+::res://Models/::1725780629
+asteroid.glb::PackedScene::6269094799873664369::1725350041::1725350055::1::::<><>::
+bullet.glb::PackedScene::4883882098430711208::1725366357::1725366359::1::::<><>::
+player.glb::PackedScene::5978325833389567439::1725349327::1725349332::1::::<><>::uid://dd2ecc4y68b61::::res://Models/player_Retrowave Sunset Color Palette - color-hex.png
+player_Retrowave Sunset Color Palette - color-hex.png::CompressedTexture2D::7425813371891094132::1725268521::1725269709::1::::<><>::
+::res://Scenes/::1726137509
+asteroid.tscn::PackedScene::7720715603461302239::1726137508::0::1::::<><>::res://Scenes/enemy.gd<>res://Materials/ast.tres
+boundary.tscn::PackedScene::6665340748619641194::1726137508::0::1::::<><>::
+bullet.gd::GDScript::-1::1726130661::0::1::::<>Area3D<>::
+bullet.tscn::PackedScene::1529719979086448261::1725782618::0::1::::<><>::res://Scenes/bullet.gd
+debug.gd::GDScript::-1::1726130661::0::1::::<>Label<>::
+Debug.tscn::PackedScene::6808391195682405583::1726137508::0::1::::<><>::uid://my7qqlnosowq::::res://Fonts/SpaceGrotesk-Regular.ttf<>res://Scenes/debug.gd
+enemy.gd::GDScript::-1::1726130661::0::1::::Enemy<>Area3D<>::
+explosion.gd::GDScript::-1::1726130662::0::1::::<>Node3D<>::
+explosion.tscn::PackedScene::837827500961536165::1726137508::0::1::::<><>::res://Scenes/explosion.gd<>uid://e8glpsphcqcf::::res://WorkingFolder/Flare000.PNG<>res://Shaders/explosion.gdshader
+hit_effect2.tscn::PackedScene::3846764798077600624::1726128075::0::1::::<><>::uid://e8glpsphcqcf::::res://WorkingFolder/Flare000.PNG<>res://Scenes/hit_effect.gd
+hit_effect.gd::GDScript::-1::1726130662::0::1::::<>GPUParticles3D<>::
+hit_effect.tscn::PackedScene::2336786319875307127::1726137509::0::1::::<><>::uid://e8glpsphcqcf::::res://WorkingFolder/Flare000.PNG<>res://Scenes/hit_effect.gd
+HUD.tscn::PackedScene::1189830008117296419::1726137508::0::1::::<><>::uid://bfww70tpe46gf::::res://Fonts/SpaceGrotesk-SemiBold.ttf
+lifecycle.gd::GDScript::-1::1726130662::0::1::::Lifecycle<>Node<>::
+metallic.tres::StandardMaterial3D::-1::1725271557::0::1::::<><>::res://Scenes/metallic_albedo.png<>res://Scenes/metallic_orm.png<>res://Scenes/metallic_normal.png<>res://Scenes/metallic_heightmap.png<>res://Scenes/metallic_emission.png
+player.gd::GDScript::-1::1726130662::0::1::::<>CharacterBody3D<>::
+player.tscn::PackedScene::8990518934031683698::1726137508::0::1::::<><>::uid://dd2ecc4y68b61::::res://WorkingFolder/player_Retrowave Sunset Color Palette - color-hex.png<>res://Scenes/player.gd<>res://Materials/met.tres<>res://Scenes/weapons.gd
+small_star.gd::GDScript::-1::1725273821::0::1::::<>Node3D<>::
+small_star.tscn::PackedScene::7260124174002819423::1726137508::0::1::::<><>::res://Scenes/small_star.gd
+weapons.gd::GDScript::-1::1725523824::0::1::::<>Node3D<>::
+::res://Shaders/::1726137525
+explosion.gdshader::Shader::-1::1726137525::0::1::::<><>::
+::res://Sounds/::1726130713
+bullet.mp3::AudioStreamMP3::8114402558708057298::1725526898::1725526905::1::::<><>::
+clack.wav::AudioStreamWAV::2566581351918388656::1726130706::1726130713::1::::<><>::
+explosion.wav::AudioStreamWAV::151448299693225000::1725534404::1725534440::1::::<><>::
+pucnhy.wav::AudioStreamWAV::2377359491148214127::1726130667::1726130693::1::::<><>::
+thump.wav::AudioStreamWAV::8087733098332670752::1725959922::1725959951::1::::<><>::
+ting.wav::AudioStreamWAV::2258499427934927932::1725960053::1725960113::1::::<><>::
+::res://WorkingFolder/::1725780831
+boss.blend::PackedScene::3745825351833735250::1725365019::1725365029::1::::<><>::
+Flare000.PNG::CompressedTexture2D::349264602473369321::1725535509::1725780831::1::::<><>::
+player.glb::PackedScene::5978325833389567439::1725190279::1725268521::1::::<><>::uid://dd2ecc4y68b61::::res://WorkingFolder/player_Retrowave Sunset Color Palette - color-hex.png
+player_Retrowave Sunset Color Palette - color-hex.png::CompressedTexture2D::7425813371891094132::1725268521::1725349331::1::::<><>::
+Retrowave Sunset Color Palette - color-hex.com.png::CompressedTexture2D::4359256411886149948::1725189107::1725349331::1::::<><>::
+shipdraft1.blend::PackedScene::2624395301544430418::1725349314::1725349336::1::::<><>::uid://b3dwk0siygxui::::res://WorkingFolder/Retrowave Sunset Color Palette - color-hex.com.png

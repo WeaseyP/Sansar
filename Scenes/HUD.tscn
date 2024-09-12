@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=3 uid="uid://q7mldkysc6wl"]
+
+[ext_resource type="FontFile" uid="uid://bfww70tpe46gf" path="res://Fonts/SpaceGrotesk-SemiBold.ttf" id="1_e84wh"]
+
+[node name="Hud" type="CanvasLayer"]
+
+[node name="Player" type="MarginContainer" parent="."]
+offset_right = 377.0
+offset_bottom = 47.0
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="GridContainer" type="GridContainer" parent="Player"]
+layout_mode = 2
+columns = 2
+
+[node name="HullIntegrityLabel" type="Label" parent="Player/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_e84wh")
+theme_override_font_sizes/font_size = 20
+text = "Hull Integrity:"
+horizontal_alignment = 2
+
+[node name="HullIntegrity Bar" type="ProgressBar" parent="Player/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+value = 100.0
+
+[node name="ShieldPowerLabel" type="Label" parent="Player/GridContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_e84wh")
+theme_override_font_sizes/font_size = 20
+text = "Shield Power:"
+horizontal_alignment = 2
+
+[node name="ShieldPower Bar" type="ProgressBar" parent="Player/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+value = 100.0

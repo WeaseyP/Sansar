@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://dr0r0o8mmxvnq"]
+
+[ext_resource type="Script" path="res://autoload/sound_manager.gd" id="1_muxs2"]
+[ext_resource type="AudioStream" uid="uid://dnuxa3pnch1ja" path="res://Sounds/bullet.mp3" id="2_hlhu2"]
+[ext_resource type="AudioStream" uid="uid://cfmljceomyai" path="res://Sounds/explosion.wav" id="3_2lve6"]
+[ext_resource type="AudioStream" uid="uid://bctjhqgky0owe" path="res://Sounds/clack.wav" id="4_sxgi7"]
+[ext_resource type="AudioStream" uid="uid://84u07t6ltxql" path="res://Sounds/pucnhy.wav" id="5_c6esx"]
+
+[node name="SoundManager" type="Node"]
+script = ExtResource("1_muxs2")
+
+[node name="BulletSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_hlhu2")
+
+[node name="ExplosionSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_2lve6")
+
+[node name="TingSound" type="AudioStreamPlayer" parent="."]
+
+[node name="ThumpSound" type="AudioStreamPlayer" parent="."]
+
+[node name="ClackSound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_sxgi7")
+
+[node name="PunchySound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_c6esx")
