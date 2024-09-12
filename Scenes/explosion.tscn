@@ -1,0 +1,118 @@
+[gd_scene load_steps=17 format=3 uid="uid://l635qnk6wmcr"]
+
+[ext_resource type="Script" path="res://Scenes/explosion.gd" id="1_m10il"]
+[ext_resource type="Texture2D" uid="uid://e8glpsphcqcf" path="res://WorkingFolder/Flare000.PNG" id="2_5q7pc"]
+[ext_resource type="Shader" path="res://Shaders/explosion.gdshader" id="2_r4hhl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8mlfl"]
+transparency = 1
+cull_mode = 2
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("2_5q7pc")
+
+[sub_resource type="Curve" id="Curve_v04vy"]
+min_value = -360.0
+max_value = 360.0
+_data = [Vector2(0, 189.612), 0.0, 0.0, 0, 0, Vector2(1, 360), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_kiita"]
+curve = SubResource("Curve_v04vy")
+
+[sub_resource type="Curve" id="Curve_0y7p5"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.104294, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_lwqx5"]
+max_value = 5.0
+_data = [Vector2(0.00613497, 5), 0.0, 0.0, 0, 0, Vector2(0.184049, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_0fqw0"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.269939, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_0bqsa"]
+curve_x = SubResource("Curve_0y7p5")
+curve_y = SubResource("Curve_lwqx5")
+curve_z = SubResource("Curve_0fqw0")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_78fhl"]
+particle_flag_align_y = true
+particle_flag_rotate_y = true
+particle_flag_damping_as_friction = true
+emission_shape = 2
+emission_sphere_radius = 0.5
+angle_curve = SubResource("CurveTexture_kiita")
+inherit_velocity_ratio = 1.0
+direction = Vector3(1, 0, 1)
+spread = 180.0
+flatness = 0.39
+initial_velocity_min = 10.0
+initial_velocity_max = 18.0
+gravity = Vector3(0, 0, 0)
+linear_accel_min = 50.0
+linear_accel_max = 100.0
+scale_curve = SubResource("CurveXYZTexture_0bqsa")
+color = Color(1, 0.230046, 0.169297, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_ono2n"]
+
+[sub_resource type="Skin" id="Skin_f82k1"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vgrjq"]
+render_priority = 0
+shader = ExtResource("2_r4hhl")
+shader_parameter/texture_speed = Vector2(0, 1)
+shader_parameter/flash_power = 1.0
+shader_parameter/flash_color = Color(1, 0.85, 0.42, 1)
+shader_parameter/fire_power = 1.0
+shader_parameter/fire_root_color = Color(1, 0.75, 0.3, 1)
+shader_parameter/fire_tip_color = Color(1, 0.03, 0, 1)
+shader_parameter/fire_speed = 1.0
+shader_parameter/smoke_power = 1.0
+shader_parameter/smoke_aperture = 0.45
+shader_parameter/smoke_color1 = Color(0.46, 0.46, 0.46, 1)
+shader_parameter/smoke_color2 = Color(0.185, 0.185, 0.185, 1)
+shader_parameter/smoke_speed = 0.1
+
+[sub_resource type="QuadMesh" id="QuadMesh_vh008"]
+lightmap_size_hint = Vector2i(7, 7)
+material = SubResource("ShaderMaterial_vgrjq")
+
+[sub_resource type="Environment" id="Environment_4mxfo"]
+glow_enabled = true
+glow_normalized = true
+glow_intensity = 4.0
+glow_strength = 1.5
+fog_enabled = true
+fog_light_color = Color(1, 0.0772659, 0.368243, 1)
+fog_sun_scatter = 1.0
+fog_density = 1.0
+fog_height = 1.0
+fog_height_density = 1.0
+
+[node name="Explosion" type="Node3D" groups=["enemy"]]
+script = ExtResource("1_m10il")
+
+[node name="Sparks" type="GPUParticles3D" parent="."]
+material_override = SubResource("StandardMaterial3D_8mlfl")
+amount = 100
+lifetime = 10.0
+speed_scale = 1.5
+explosiveness = 1.0
+fixed_fps = 60
+transform_align = 3
+trail_enabled = true
+trail_lifetime = 2.0
+process_material = SubResource("ParticleProcessMaterial_78fhl")
+draw_pass_1 = SubResource("QuadMesh_ono2n")
+draw_skin = SubResource("Skin_f82k1")
+
+[node name="Fire" type="MeshInstance3D" parent="."]
+transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 0, 0, 0)
+mesh = SubResource("QuadMesh_vh008")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_4mxfo")
